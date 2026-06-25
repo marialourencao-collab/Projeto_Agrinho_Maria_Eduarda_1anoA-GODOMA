@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Futuro Sustentável</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#e8f5e9,#c8e6c9);
+color:#222;
+transition:0.5s;
+}
+
+header{
+background:#2e7d32;
+color:white;
+padding:20px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
+
+.acessibilidade{
+margin-top:15px;
+}
+
+.acessibilidade button{
+padding:10px;
+margin:5px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.hero{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+padding:60px 20px;
+flex-wrap:wrap;
+}
+
+.hero img{
+width:500px;
+max-width:100%;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+.texto{
+max-width:500px;
+}
+
+.texto h2{
+font-size:42px;
+margin-bottom:15px;
+color:#1b5e20;
+}
+
+.texto p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.texto button{
+padding:15px 25px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+#mensagem{
+margin-top:20px;
+font-weight:bold;
+font-size:18px;
+}
+
+section{
+padding:60px 20px;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.card{
+background:white;
+width:300px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+}
+
+.card p{
+padding:0 15px 20px;
+}
+
+#quiz{
+text-align:center;
+background:#dcedc8;
+}
+
+#quiz button{
+display:block;
+margin:15px auto;
+padding:15px;
+width:300px;
+border:none;
+background:#388e3c;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+
+#resultado{
+margin-top:20px;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.alto-contraste{
+background:black;
+color:white;
+}
+
+.alto-contraste .card{
+background:#222;
+color:white;
+}
+
+.alto-contraste #quiz{
+background:#111;
+}
+
+.alto-contraste header,
+.alto-contraste footer{
+background:#000;
+}
+
+@media(max-width:768px){
+.hero{
+flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌎 Futuro Sustentável</h1>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#acoes">Ações</a>
+<a href="#quiz">Quiz</a>
+</nav>
+
+<div class="acessibilidade">
+<button onclick="aumentarFonte()">A+</button>
+<button onclick="diminuirFonte()">A-</button>
+<button onclick="alternarContraste()">♿ Contraste</button>
+</div>
+</header>
+
+<section id="inicio" class="hero">
+
+<div class="texto">
+<h2>Construindo um Futuro Melhor</h2>
+
+<p>
+Cada pequena atitude ajuda a preservar os recursos naturais,
+reduzir a poluição e garantir qualidade de vida para as futuras gerações.
+</p>
+
+<button onclick="mostrarMensagem()">
+Descobrir Como Ajudar
+</button>
+
+<div id="mensagem"></div>
+
+</div>
+
+<img
+src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200"
+alt="Floresta sustentável">
+</section>
+
+<section id="acoes">
+
+<h2>🌱 Ações Sustentáveis</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200">
+<h3>♻️ Reciclagem</h3>
+<p>Separar corretamente os resíduos reduz a poluição e preserva recursos naturais.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1200">
+<h3>☀️ Energia Limpa</h3>
+<p>Fontes renováveis diminuem os impactos ambientais e ajudam no combate às mudanças climáticas.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1200">
+<h3>🌳 Reflorestamento</h3>
+<p>O plantio de árvores melhora a qualidade do ar e protege a biodiversidade.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="quiz">
+
+<h2>🎯 Quiz Sustentável</h2>
+
+<p>Qual atitude economiza água?</p>
+
+<button onclick="respostaErrada()">
+Lavar a calçada com mangueira
+</button>
+
+<button onclick="respostaCerta()">
+Reutilizar água da chuva
+</button>
+
+<button onclick="respostaErrada()">
+Tomar banhos muito longos
+</button>
+
+<h3 id="resultado"></h3>
+
+</section>
+
+<footer>
+<p>🌎 Futuro Sustentável © 2026</p>
+</footer>
+
+<script>
+
+let tamanho = 16;
+
+function aumentarFonte(){
+tamanho += 2;
+document.body.style.fontSize = tamanho + "px";
+}
+
+function diminuirFonte(){
+tamanho -= 2;
+document.body.style.fontSize = tamanho + "px";
+}
+
+function alternarContraste(){
+document.body.classList.toggle("alto-contraste");
+}
+
+function mostrarMensagem(){
+document.getElementById("mensagem").innerHTML =
+"✅ Economize água, recicle materiais, plante árvores e utilize energia renovável.";
+}
+
+function respostaCerta(){
+document.getElementById("resultado").innerHTML =
+"✅ Correto! Reutilizar água da chuva ajuda a preservar esse recurso tão importante.";
+}
+
+function respostaErrada(){
+document.getElementById("resultado").innerHTML =
+"❌ Não é a melhor alternativa. Tente novamente!";
+}
+
+</script>
+
+</body>
+</html>
