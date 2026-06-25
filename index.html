@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Futuro Sustentável</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌎 Futuro Sustentável</h1>
+
+    <div class="acessibilidade">
+        <button onclick="aumentarFonte()">A+</button>
+        <button onclick="diminuirFonte()">A-</button>
+        <button onclick="lerTexto()">🔊 Ler Página</button>
+        <button onclick="alternarTema()">🌙 Tema</button>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>Construa um futuro melhor!</h2>
+    <p>
+        Pequenas atitudes geram grandes transformações.
+    </p>
+</section>
+
+<section class="progresso">
+    <h2>Seu Nível Sustentável</h2>
+
+    <div class="barra">
+        <div id="nivel"></div>
+    </div>
+
+    <button onclick="ganharPontos()">Pratique Sustentabilidade</button>
+</section>
+
+<section class="quiz">
+
+<h2>Quiz Sustentável</h2>
+
+<p>Qual atitude ajuda o meio ambiente?</p>
+
+<button onclick="respostaCorreta()">Reciclar resíduos</button>
+<button onclick="respostaErrada()">Jogar lixo no rio</button>
+
+<p id="resultado"></p>
+
+</section>
+
+<section class="calculadora">
+
+<h2>Calculadora Ecológica</h2>
+
+<input type="number" id="energia" placeholder="Consumo mensal (kWh)">
+<button onclick="calcular()">Calcular</button>
+
+<p id="ecoResultado"></p>
+
+</section>
+
+<section class="chatbot">
+
+<h2>EcoBot 🌱</h2>
+
+<div id="chat">
+<p>Olá! Pergunte algo sobre sustentabilidade.</p>
+</div>
+
+<input type="text" id="pergunta">
+<button onclick="responder()">Enviar</button>
+
+</section>
+
+<footer>
+    <p>Projeto Futuro Sustentável © 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
